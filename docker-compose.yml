@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  python:
+    build:
+      context: ./backend
+      args:
+        PYTHON_TAG: $PYTHON_TAG
+    container_name: "${PROJECT_NAME}_python"
+    environment:
+      FLASK_ENV: $PYTHON_FLASK_ENV
+      FLASK_APP: $PYTHON_FLASK_APP
+      FLASK_RUN_HOST: $PYTHON_FLASK_HOST
+      APP_CONFIG_FILE: $PYTHON_FLASK_CONFIG_FILE
+    volumes:
+    - ./backend:/usr/src/app:cached
