@@ -30,7 +30,8 @@ COPY . .
 #         "--timeout" , "3600" ,  \
 #         "${APP_PACKAGE_NAME} ${WSGI_APP}"  \
 #     ]
-CMD [ "gunicorn" ,  "socimg:application"]
+# CMD [ "gunicorn" , "--reload" , "socimg:application" ]
+CMD [ "flask" , "run"  ]
 # CMD gunicorn \
 #         --bind :${BACKEND_PORT} \
 #         --workers 2 \

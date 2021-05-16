@@ -1,2 +1,3 @@
 data/db/*
-!data/db/.gitkeep 
+!data/db/.gitkeep
+*.pyc

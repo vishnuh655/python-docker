@@ -30,6 +30,7 @@ def create_app(test_config=None):
 
     # register_routes(api, app)
     db.init_app(app)
+    uasdyfgvasodufh;adjsfh
 
     @app.route("/health")
     def health():

@@ -21,7 +21,7 @@ services:
     volumes:
     - ./backend:/code
     labels:
-     - "traefik.http.routers.${PROJECT_NAME}_adminer.rule=Host(`adminer.${PROJECT_BASE_URL}`)"
+     - "traefik.http.routers.${PROJECT_NAME}_backend.rule=Host(`backend.${PROJECT_BASE_URL}`)"
 
   mysql:
     image: mysql:$MYSQL_TAG
